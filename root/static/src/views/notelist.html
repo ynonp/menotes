@@ -1,0 +1,9 @@
+<div class="list-group">
+  <a data-toggle="modal" data-target="#new-note-dlg" class="list-group-item new-item">New Note</a>
+  <a ng-repeat="note in list" class="list-group-item note-item">
+    {{note.title}}
+    <span class="btn btn-danger note-delete" ng-click="delete_note($index)">-</span>
+  </a>
+</div>
+
+

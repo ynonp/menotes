@@ -1,0 +1,7 @@
+<ul class="nav nav-pills nav-stacked">
+  <li><a class="new-item" data-toggle="modal" data-target="#new-book-dlg">New Notebook</a></li>
+  <li ng-repeat="project in list"
+      ng-class="{'active' : project.id == active_notebook}" >
+    <a ng-href="#/notebooks/{{project.id}}">{{project.name}}</a>
+  </li>
+</ul>

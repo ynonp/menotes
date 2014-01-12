@@ -1,0 +1,23 @@
+.note-delete {
+    float: right;
+}
+.note-item {
+    width: 100%;
+    min-height: 50px;
+}
+
+.new-item {
+    border-bottom: 1px solid gray;
+    color: #242424;
+    background: lightyellow;
+}
+.new-item:after {
+    content: "+";
+    padding: 1px 10px;
+    background: #a7a7a7;
+    border-radius: 5px;
+    float: right;
+}
+.busy:after {
+    content: "Working ...";
+}

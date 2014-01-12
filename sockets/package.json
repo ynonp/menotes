@@ -1,0 +1,11 @@
+{
+  "name": "notes-socket",
+  "dependencies" : {
+    "socket.io" : "*",
+    "ws" : "*",
+    "express" : "*",
+    "amqp" : "*"
+  },
+  "version": "0.0.1"
+}
+

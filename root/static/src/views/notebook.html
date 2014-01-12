@@ -1,0 +1,40 @@
+<div ng-controller="Home">
+
+
+  <h1>Notebooks FTW</h1>
+
+  <div class="col-xs-4"  ng-controller="NotebooksList" ng-class="{busy: busy}">
+    <div ng-include="'src/views/notebooks.html'"></div>
+  </div>
+  <div class="col-xs-8"
+       ng-controller="NotesList">
+
+    <div ng-if="active_notebook">
+      <div ng-include="'src/views/notelist.html'"></div>
+    </div>
+
+  </div>
+
+  <!-- Dialog -->
+  <my-dialog
+    dlg-title="Note Details"
+    dlg-ok="add_note(active_notebook, dlg.title, dlg.text)"
+    dlg-id="new-note-dlg"
+    dlg-title="New Note">
+
+    <dlg-text ng-model="dlg.title"></dlg-text>
+    <dlg-textarea ng-model="dlg.text"></dlg-textarea>
+  </my-dialog>
+
+  <!-- Dialog -->
+  <my-dialog
+    dlg-title="Notebook Details"
+    dlg-ok="add_notebook(dlg.notebook_name)"
+    dlg-id="new-book-dlg"
+    dlg-title="New Notebook">
+
+    <dlg-text ng-model="dlg.notebook_name"></dlg-text>
+  </my-dialog>
+
+
+</div>
